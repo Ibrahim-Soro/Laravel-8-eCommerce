@@ -1,3 +1,6 @@
+@section('title')
+    <title>Find it | Home</title>
+@endsection
 <main id="main">
     <div class="container">
 

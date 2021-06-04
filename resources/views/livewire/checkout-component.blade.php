@@ -1,3 +1,6 @@
+@section('title')
+    <title>Find it | Checkout</title>
+@endsection
 <main id="main" class="main-site">
 
     <div class="container">
