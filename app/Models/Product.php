@@ -11,7 +11,7 @@ class Product extends Model
 
     protected $table = "products";
 
-    public function formatedPrice(){
+    public function getFormatedPrice(){
         $price = number_format($this->regular_price, 0, '', ' ') . " Fcfa";
         return $price;
     }

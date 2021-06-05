@@ -43,7 +43,7 @@
 
 			<div class="wrap-breadcrumb">
 				<ul>
-					<li class="item-link"><a href="{{ route('HomePage') }}" class="link">home</a></li>
+					<li class="item-link"><a href="{{ route('page.home') }}" class="link">home</a></li>
 					<li class="item-link"><a href="{{ route('login') }}" class="link">login</a></li>
 					<li class="item-link"><span>Forgotten Password</span></li>
 				</ul>

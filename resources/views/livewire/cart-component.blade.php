@@ -6,7 +6,7 @@
 
         <div class="wrap-breadcrumb">
             <ul>
-                <li class="item-link"><a href="#" class="link">home</a></li>
+                <li class="item-link"><a href="{{ route('page.home') }}" class="link">home</a></li>
                 <li class="item-link"><span>login</span></li>
             </ul>
         </div>
@@ -75,7 +75,7 @@
                     <label class="checkbox-field">
                         <input class="frm-input " name="have-code" id="have-code" value="" type="checkbox"><span>I have promo code</span>
                     </label>
-                    <a class="btn btn-checkout" href="{{ route('CheckoutPage') }}">Check out</a>
+                    <a class="btn btn-checkout" href="{{ route('product.checkout') }}">Check out</a>
                     <a class="link-to-shop" href="shop.html">Continue Shopping<i class="fa fa-arrow-circle-right" aria-hidden="true"></i></a>
                 </div>
                 <div class="update-clear">
