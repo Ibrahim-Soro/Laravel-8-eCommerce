@@ -17,3 +17,11 @@
     color: red;
     font-weight: bold;
 }
+#checkout-bg {
+    background: #fdfdfd;
+    border: 1px solid #e6e6e6;
+    padding: 25px 40px 21px 40px;
+}
+#checkout-info {
+    padding-top: 50px;
+}

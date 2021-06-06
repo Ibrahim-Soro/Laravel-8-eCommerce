@@ -166,11 +166,11 @@
 								</a>
 							</div>
 							<div class="wrap-icon-section minicart">
-								<a href="#" class="link-direction">
+								<a href="{{ route('product.cart') }}" class="link-direction">
 									<i class="fa fa-shopping-basket" aria-hidden="true"></i>
 									<div class="left-info">
-										<span class="index">4 items</span>
-										<span class="title">CART</span>
+										<span class="index">{{ Cart::count() }} @if(Cart::count() > 1) articles @else article @endif</span>
+										<span class="title">PANIER</span>
 									</div>
 								</a>
 							</div>
