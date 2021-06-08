@@ -8,7 +8,8 @@
         <div class="wrap-breadcrumb">
             <ul>
                 <li class="item-link"><a href="{{ route('page.home') }}" class="link">home</a></li>
-                <li class="item-link"><span>Digital & Electronics</span></li>
+                <li class="item-link"><span>Catégorie</span></li>
+                <li class="item-link"><span>{{ $category_name }}</span></li>
             </ul>
         </div>
         <div class="row">
@@ -23,7 +24,7 @@
 
                 <div class="wrap-shop-control">
 
-                    <h1 class="shop-title">Tous les articles</h1>
+                    <h1 class="shop-title">Catégorie: {{ $category_name }}</h1>
 
                     <div class="wrap-right">
 
