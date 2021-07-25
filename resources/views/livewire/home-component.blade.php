@@ -1,5 +1,5 @@
 @section('title')
-    <title>Find it | Home</title>
+    <title>Find it | Accueil</title>
 @endsection
 <main id="main">
     <div class="container">

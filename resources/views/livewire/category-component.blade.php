@@ -1,5 +1,5 @@
 @section('title')
-    <title>Find it | Shop</title>
+    <title>Find it | {{ $category_name }}</title>
 @endsection
 <main id="main" class="main-site left-sidebar">
 

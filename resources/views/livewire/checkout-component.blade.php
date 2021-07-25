@@ -1,5 +1,5 @@
 @section('title')
-    <title>Find it | Checkout</title>
+    <title>Find it | Paiement</title>
 @endsection
 <main id="main" class="main-site">
 

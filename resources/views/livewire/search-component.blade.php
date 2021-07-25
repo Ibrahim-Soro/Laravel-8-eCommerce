@@ -1,5 +1,5 @@
 @section('title')
-    <title>Find it | Boutique</title>
+    <title>Find it | Recherche...</title>
 @endsection
 <main id="main" class="main-site left-sidebar">
 
@@ -61,22 +61,33 @@
 
                     <ul class="product-list grid-products equal-container">
 
-                        @foreach($products as $product)
-                        <li class="col-lg-4 col-md-6 col-sm-6 col-xs-6 ">
-                            <div class="product product-style-3 equal-elem ">
-                                <div class="product-thumnail">
-                                    <a href="{{ route('product.details', ['slug' => $product->slug]) }}" title="{{ $product->name }}">
-                                        <figure><img src="{{ asset('assets/images/products') }}/{{ $product->image }}" alt="{{ $product->name }}"></figure>
-                                    </a>
+                        @if ($products->count() > 0)
+                            @foreach($products as $product)
+                            <li class="col-lg-4 col-md-6 col-sm-6 col-xs-6 ">
+                                <div class="product product-style-3 equal-elem ">
+                                    <div class="product-thumnail">
+                                        <a href="{{ route('product.details', ['slug' => $product->slug]) }}" title="{{ $product->name }}">
+                                            <figure><img src="{{ asset('assets/images/products') }}/{{ $product->image }}" alt="{{ $product->name }}"></figure>
+                                        </a>
+                                    </div>
+                                    <div class="product-info">
+                                        <a href="{{ route('product.details', ["slug" => $product->slug]) }}" class="product-name"><span>{{ $product->name }}</span></a>
+                                        <div class="wrap-price"><span class="product-price">{{ $product->getFormatedPrice() }}</span></div>
+                                        <a href="#" class="btn add-to-cart" wire:click.prevent="store({{ $product->id }}, '{{ $product->name }}', {{ $product->regular_price }})">Ajouter au panier</a>
+                                    </div>
                                 </div>
-                                <div class="product-info">
-                                    <a href="{{ route('product.details', ["slug" => $product->slug]) }}" class="product-name"><span>{{ $product->name }}</span></a>
-                                    <div class="wrap-price"><span class="product-price">{{ $product->getFormatedPrice() }}</span></div>
-                                    <a href="#" class="btn add-to-cart" wire:click.prevent="store({{ $product->id }}, '{{ $product->name }}', {{ $product->regular_price }})">Ajouter au panier</a>
+                            </li>
+                            @endforeach
+                        @else
+                            <div class="product-list grid-products equal-container" style="margin-top: 3rem">
+                                <div class="col-xs-12 rounded">
+                                    <div class="aboutus-box-score equal-elem ">
+                                        <b class="box-score-title" style="color: red"><i class="fa fa-warning"></i>Oops!</b>
+                                        <span class="sub-title" style="font-weight: bold">Aucun produit ne correspond à votre recherche ...</span>
+                                    </div>
                                 </div>
                             </div>
-                        </li>
-                        @endforeach
+                        @endif
 
                     </ul>
 

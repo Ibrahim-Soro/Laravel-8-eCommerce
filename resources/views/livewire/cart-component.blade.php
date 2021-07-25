@@ -1,5 +1,5 @@
 @section('title')
-    <title>Find it | Cart</title>
+    <title>Find it | Panier</title>
 @endsection
 <main id="main" class="main-site">
     <div class="container">
@@ -51,7 +51,7 @@
 
             <a class="link-to-shop btn btn-success mx-0 mb-4" style="margin-bottom: 1rem" href="{{ route('product.shop') }}">Ajouter des articles <i class="fa fa-arrow-circle-right" aria-hidden="true"></i></a>
 
-            <div class="summary row" id="checkout-bg">                              
+            <div class="summary row" id="checkout-bg">
                 <div class="order-summary col-lg-4 col-md-4 col-sm-4 col-xs-12">
                     <h4 class="title-box">Order Summary</h4>
                     <p class="summary-info"><span class="title">Subtotal</span><b class="index">{{ Cart::subtotal() }}</b></p>
