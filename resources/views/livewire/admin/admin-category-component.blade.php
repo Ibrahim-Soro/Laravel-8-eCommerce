@@ -7,7 +7,7 @@
     <div class="d-sm-flex align-items-center justify-content-between mb-4">
         <h1 class="h3 mb-0 text-gray-800"><i class="fas fa-table mx-1"></i>Catégories</h1>
 
-        <a href="{{ route('admin.addcategory') }}" class="btn btn-primary btn-icon-split btn-sm d-none d-sm-inline-block pr-2">
+        <a href="{{ route('admin.addcategory') }}" class="btn btn-primary bg-gradient-primary btn-icon-split btn-sm d-none d-sm-inline-block pr-2">
             <span class="icon">
                 <i class="fas fa-folder"></i>
             </span>
@@ -42,7 +42,10 @@
                                 <td>{{ $category->id }}</td>
                                 <td>{{ $category->name }}</td>
                                 <td>{{ $category->slug }}</td>
-                                <td> </td>
+                                <td class="d-flex justify-content-between">
+                                    <a class="btn-circle text-white bg-gradient-primary mx-3" href="{{ route('admin.editcategory', ['category_slug' => $category->slug]) }}" title="Modifier"><i class="fas fa-edit "></i></a>
+                                    <a class="btn-circle text-white bg-gradient-danger mx-3" href="#" title="Modifier"><i class="fas fa-trash "></i></a>
+                                </td>
                             </tr>
                         @endforeach
                     </tbody>
