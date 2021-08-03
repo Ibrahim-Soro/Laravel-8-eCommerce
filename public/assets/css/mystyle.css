@@ -28,10 +28,9 @@
 #checkout-info {
     padding-top: 50px;
 }
-
-
-
-
-
-
-
+nav svg {
+    height: 20px;
+}
+nav .hidden{
+    display: block !important;
+}
