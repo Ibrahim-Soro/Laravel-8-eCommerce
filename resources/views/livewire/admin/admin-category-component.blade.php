@@ -32,6 +32,7 @@
                             <th>#Id</th>
                             <th>Nom</th>
                             <th>Slug</th>
+                            <th>Date de création</th>
                             <th>Actions</th>
                         </tr>
                     </thead>
@@ -42,8 +43,9 @@
                                 <td>{{ $category->id }}</td>
                                 <td>{{ $category->name }}</td>
                                 <td>{{ $category->slug }}</td>
+                                <td>{{ $category->created_at->format('d/m/Y à h:i') }}</td>
                                 <td class="d-flex justify-content-between">
-                                    <a class="btn-circle text-white bg-gradient-primary mx-3" href="{{ route('admin.editcategory', ['category_slug' => $category->slug]) }}" title="Modifier"><i class="fas fa-edit "></i></a>
+                                    <a class="btn-circle text-white bg-gradient-secondary mx-3" href="{{ route('admin.editcategory', ['category_slug' => $category->slug]) }}" title="Modifier"><i class="fas fa-edit "></i></a>
                                     <a class="btn-circle text-white bg-gradient-danger mx-3" href="#" wire:click.prevent="deleteCategory({{ $category->id }})" title="Modifier"><i class="fas fa-trash "></i></a>
                                 </td>
                             </tr>

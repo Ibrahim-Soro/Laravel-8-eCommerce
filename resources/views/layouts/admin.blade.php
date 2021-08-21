@@ -46,7 +46,7 @@
 
         <!-- Nav Item - Articles -->
         <li class="nav-item">
-            <a class="nav-link" href="index.html">
+            <a class="nav-link" href="{{ route('admin.products') }}">
             <i class="fas fa-fw fa-newspaper"></i>
             <span>Articles</span></a>
         </li>

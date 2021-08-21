@@ -11,6 +11,11 @@ class Product extends Model
 
     protected $table = "products";
 
+    public function category()
+    {
+        return $this->belongsTo(Category::class, 'category_id');
+    }
+
     public function getFormatedPrice(){
         $price = number_format($this->regular_price, 0, '', ' ') . " Fcfa";
         return $price;
