@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Livewire\Admin\AdminAddCategoryComponent;
+use App\Http\Livewire\Admin\AdminAddProductComponent;
 use App\Http\Livewire\Admin\AdminCategoryComponent;
 use App\Http\Livewire\CartComponent;
 use App\Http\Livewire\HomeComponent;
@@ -54,4 +55,5 @@ Route::middleware(['auth:sanctum', 'verified', 'authadmin'])->group(function() {
     Route::get('admin/category/add', AdminAddCategoryComponent::class)->name('admin.addcategory');
     Route::get('admin/category/edit/{category_slug}', AdminEditCategoryComponent::class)->name('admin.editcategory');
     Route::get('admin/product', AdminProductComponent::class)->name('admin.products');
+    Route::get('admin/product/add', AdminAddProductComponent::class)->name('admin.addproduct');
 });

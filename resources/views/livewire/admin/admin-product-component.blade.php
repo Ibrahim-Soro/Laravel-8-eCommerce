@@ -7,11 +7,11 @@
     <div class="d-sm-flex align-items-center justify-content-between mb-4">
         <h1 class="h3 mb-0 text-gray-800"><i class="fas fa-newspaper mx-1"></i>Articles</h1>
 
-        <a href="{{ route('admin.addcategory') }}" class="btn btn-primary bg-gradient-primary btn-icon-split btn-sm d-none d-sm-inline-block pr-2">
+        <a href="{{ route('admin.addproduct') }}" class="btn btn-primary bg-gradient-primary btn-icon-split btn-sm d-none d-sm-inline-block pr-2">
             <span class="icon">
                 <i class="fas fa-fw fa-newspaper"></i>
             </span>
-            <span>Nouvel article</span>
+            <span>Ajouter un article</span>
         </a>
     </div>
 

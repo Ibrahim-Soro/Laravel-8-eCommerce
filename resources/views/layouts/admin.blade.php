@@ -42,8 +42,6 @@
         <!-- Divider -->
         <hr class="sidebar-divider my-0">
 
-
-
         <!-- Nav Item - Articles -->
         <li class="nav-item">
             <a class="nav-link" href="{{ route('admin.products') }}">
