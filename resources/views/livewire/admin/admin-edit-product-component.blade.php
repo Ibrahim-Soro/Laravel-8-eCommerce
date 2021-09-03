@@ -1,11 +1,11 @@
 @section('title')
-<title>Find it | Ajouter un article</title>
+<title>Find it | Modifier l'article</title>
 @endsection
 
 <div class="container-fluid">
     <!-- Page Heading -->
     <div class="d-sm-flex align-items-center justify-content-between mb-4">
-        <h1 class="h3 mb-0 text-gray-800"><i class="fas fa-newspaper mx-1"></i>Ajouter un artilce</h1>
+        <h1 class="h3 mb-0 text-gray-800"><i class="fas fa-newspaper mx-1"></i>Modifier l'artilce</h1>
 
         <a href="{{ route('admin.products') }}" class="btn btn-primary bg-gradient-primary btn-icon-split btn-sm d-none d-sm-inline-block pr-2">
             <span class="icon">
@@ -18,10 +18,10 @@
     <!-- DataTales Example -->
     <div class="card shadow mb-4">
         <div class="card-header py-3">
-            <h6 class="m-0 font-weight-bold text-primary">Ajouter un nouvel article</h6>
+            <h6 class="m-0 font-weight-bold text-primary">Mise à jour ou Modification de l'article</h6>
         </div>
         <div class="card-body">
-            <form wire:submit.prevent="storeProduct">
+            <form wire:submit.prevent="updateProduct">
 
                 <div class="row">
                     <div class="col-md-6">
@@ -119,9 +119,11 @@
                     <div class="col-md-4">
                         <div class="form-group">
                             <label for="image" class="control-label font-weight-bold text-dark">Image:</label>
-                            <input type="file" name="image" id="image" class="" wire:model="image">
-                            @if ($image)
-                                <img src="{{ $image->temporaryUrl() }}" width="120" alt="{{ $name }}">
+                            <input type="file" name="image" id="image" class="" wire:model="newimage">
+                            @if ($newimage)
+                                <img src="{{ $newimage->temporaryUrl() }}" width="120" alt="{{ $name }}">
+                            @else
+                                <img src="{{ asset('assets/images/products') }}/{{ $image }}" width="120" alt="{{ $name }}">
                             @endif
                         </div>
                     </div>
@@ -129,7 +131,7 @@
 
                 <div class="form-group">
                     <button type="submit" class="btn btn-success text-white bg-gradient-success">
-                        Enregistrer
+                        Mettre à jour
                     </button>
                 </div>
 

@@ -11,7 +11,7 @@
             <span class="icon">
                 <i class="fas fa-folder"></i>
             </span>
-            <span>Nouvelle catégorie</span>
+            <span>Ajouter une catégorie</span>
         </a>
     </div>
 

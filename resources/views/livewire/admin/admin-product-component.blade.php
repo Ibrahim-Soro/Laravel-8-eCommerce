@@ -1,5 +1,5 @@
 @section('title')
-<title>Find it | Admin Category</title>
+<title>Find it | Admin Products</title>
 @endsection
 
 <div class="container-fluid">
@@ -60,8 +60,8 @@
                                 <td>{{ $product->created_at->format('d/m/Y à h:i') }}</td>
                                 <td>
                                     <div class="d-flex justify-content-between">
-                                        <a class="btn-circle text-white bg-gradient-secondary mx-3" href="{{ route('admin.editcategory', ['category_slug' => $product->slug]) }}" title="Modifier"><i class="fas fa-edit "></i></a>
-                                        <a class="btn-circle text-white bg-gradient-danger mx-3" href="#" wire:click.prevent="deleteCategory({{ $product->id }})" title="Modifier"><i class="fas fa-trash "></i></a>
+                                        <a class="btn-circle text-white bg-gradient-secondary mx-3" href="{{ route('admin.editproduct', ['product_slug' => $product->slug]) }}" title="Modifier"><i class="fas fa-edit "></i></a>
+                                        <a class="btn-circle text-white bg-gradient-danger mx-3" href="#" wire:click.prevent="deletProduct({{ $product->id }})" title="Modifier"><i class="fas fa-trash "></i></a>
                                     </div>
                                 </td>
                             </tr>

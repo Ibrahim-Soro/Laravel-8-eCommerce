@@ -43,14 +43,14 @@
         <hr class="sidebar-divider my-0">
 
         <!-- Nav Item - Articles -->
-        <li class="nav-item">
+        <li class="nav-item {{ Request::routeIs('admin.products') || Request::routeIs('admin.addproduct') || Request::routeIs('admin.editproduct') ? 'active' : '' }}">
             <a class="nav-link" href="{{ route('admin.products') }}">
             <i class="fas fa-fw fa-newspaper"></i>
             <span>Articles</span></a>
         </li>
 
         <!-- Nav Item - Category -->
-        <li class="nav-item {{ Request::routeIs('admin.categories') || Request::routeIs('admin.addcategory') ? 'active' : '' }}">
+        <li class="nav-item {{ Request::routeIs('admin.categories') || Request::routeIs('admin.addcategory') || Request::routeIs('admin.editcategory') ? 'active' : '' }}">
             <a class="nav-link" href="{{ route('admin.categories') }}">
             <i class="fas fa-fw fa-table"></i>
             <span>Catégories</span></a>
