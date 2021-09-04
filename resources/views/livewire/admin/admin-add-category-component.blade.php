@@ -33,8 +33,11 @@
                             <input type="text" name="slug" id="slug" class="form-control" placeholder="nom-de-categorie" wire:model="slug">
                         </div>
                         <div class="form-group">
-                            <button type="submit" class="btn btn-success text-white bg-gradient-success">
-                                Enregistrer
+                            <button type="submit" class="btn btn-success text-white bg-gradient-success btn-icon-split d-none d-inline-block pr-2">
+                                <span class="icon">
+                                    <i class="fas fa-folder-plus"></i>
+                                </span>
+                                <span>Enregistrer</span>
                             </button>
                         </div>
                     </form>

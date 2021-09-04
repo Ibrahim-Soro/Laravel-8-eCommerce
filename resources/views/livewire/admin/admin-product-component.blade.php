@@ -61,7 +61,7 @@
                                 <td>
                                     <div class="d-flex justify-content-between">
                                         <a class="btn-circle text-white bg-gradient-secondary mx-3" href="{{ route('admin.editproduct', ['product_slug' => $product->slug]) }}" title="Modifier"><i class="fas fa-edit "></i></a>
-                                        <a class="btn-circle text-white bg-gradient-danger mx-3" href="#" wire:click.prevent="deletProduct({{ $product->id }})" title="Modifier"><i class="fas fa-trash "></i></a>
+                                        <a class="btn-circle text-white bg-gradient-danger mx-3" href="#" wire:click.prevent="deletProduct({{ $product->id }})" title="Supprimer"><i class="fas fa-trash "></i></a>
                                     </div>
                                 </td>
                             </tr>

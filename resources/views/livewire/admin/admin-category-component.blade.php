@@ -9,7 +9,7 @@
 
         <a href="{{ route('admin.addcategory') }}" class="btn btn-primary bg-gradient-primary btn-icon-split btn-sm d-none d-sm-inline-block pr-2">
             <span class="icon">
-                <i class="fas fa-folder"></i>
+                <i class="fas fa-table"></i>
             </span>
             <span>Ajouter une catégorie</span>
         </a>
@@ -46,7 +46,7 @@
                                 <td>{{ $category->created_at->format('d/m/Y à h:i') }}</td>
                                 <td class="d-flex justify-content-between">
                                     <a class="btn-circle text-white bg-gradient-secondary mx-3" href="{{ route('admin.editcategory', ['category_slug' => $category->slug]) }}" title="Modifier"><i class="fas fa-edit "></i></a>
-                                    <a class="btn-circle text-white bg-gradient-danger mx-3" href="#" wire:click.prevent="deleteCategory({{ $category->id }})" title="Modifier"><i class="fas fa-trash "></i></a>
+                                    <a class="btn-circle text-white bg-gradient-danger mx-3" href="#" wire:click.prevent="deleteCategory({{ $category->id }})" title="Supprimer"><i class="fas fa-trash "></i></a>
                                 </td>
                             </tr>
                         @endforeach

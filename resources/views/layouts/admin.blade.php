@@ -56,6 +56,13 @@
             <span>Catégories</span></a>
         </li>
 
+        <!-- Nav Item - Bannière -->
+        <li class="nav-item {{ Request::routeIs('admin.homeslider') || Request::routeIs('admin.addhomeslider') || Request::routeIs('admin.edithomeslider') ? 'active' : '' }}">
+            <a class="nav-link" href="{{ route('admin.homeslider') }}">
+            <i class="fas fa-fw fa-image"></i>
+            <span>Bannières</span></a>
+        </li>
+
         <!-- Divider -->
         <hr class="sidebar-divider">
         <hr class="sidebar-divider">
