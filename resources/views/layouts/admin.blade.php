@@ -15,6 +15,7 @@
     <link rel="shortcut icon" type="image/x-icon" href="{{ asset('assets/images/favicon.png') }}">
     <link href="{{ asset('admin/vendor/fontawesome-free/css/all.min.css') }}" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
 
     <!-- Custom styles for this template-->
     <link href="{{ asset('admin/css/sb-admin-2.min.css') }}" rel="stylesheet">
@@ -61,6 +62,13 @@
             <a class="nav-link" href="{{ route('admin.homeslider') }}">
             <i class="fas fa-fw fa-image"></i>
             <span>Bannières</span></a>
+        </li>
+
+        <!-- Nav Item - Manage Categories -->
+        <li class="nav-item {{ Request::routeIs('admin.homecategories') ? 'active' : '' }}">
+            <a class="nav-link" href="{{ route('admin.homecategories') }}">
+            <i class="fas fa-fw fa-image"></i>
+            <span>Gestion des catégories</span></a>
         </li>
 
         <!-- Divider -->
@@ -255,7 +263,10 @@
     <!-- Page level custom scripts -->
     <script src="{{ asset('admin/js/demo/chart-area-demo.js') }}"></script>
     <script src="{{ asset('admin/js/demo/chart-pie-demo.js') }}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
     @livewireScripts
+
+    @stack('scripts')
 
 </body>
 

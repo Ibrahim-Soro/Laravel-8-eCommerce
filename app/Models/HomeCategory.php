@@ -5,11 +5,11 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Category extends Model
+class HomeCategory extends Model
 {
     use HasFactory;
 
-    protected $table = "categories";
+    protected $table = 'home_categories';
 
     public function getFormatedPrice(){
         $price = number_format($this->price, 0, '', ' ') . " Fcfa";
