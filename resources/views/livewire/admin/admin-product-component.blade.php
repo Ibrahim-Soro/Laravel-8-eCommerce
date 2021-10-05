@@ -27,13 +27,14 @@
         <div class="card-body">
             <div class="table-responsive">
                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-                    <thead>
+                    <thead class="text-center">
                         <tr>
                             <th>#Unik-Id</th>
                             <th>Image</th>
                             <th>Article</th>
                             <th>Disponibilité</th>
                             <th>Prix</th>
+                            <th>Prix promo</th>
                             <th>catégorie</th>
                             <th>Date de création</th>
                             <th>Actions</th>
@@ -56,6 +57,7 @@
                                     @endif
                                 </td>
                                 <td width="130">{{ $product->getFormatedPrice() }}</td>
+                                <td width="130">{{ number_format($product->sale_price, 0, '', ' ') }} Fcfa</td>
                                 <td>{{ $product->category->name }}</td>
                                 <td>{{ $product->created_at->format('d/m/Y à h:i') }}</td>
                                 <td>
