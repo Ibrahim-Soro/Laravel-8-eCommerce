@@ -83,7 +83,7 @@
                 <div class="form-group">
                     <button type="submit" class="btn btn-success text-white bg-gradient-success btn-icon-split d-none d-inline-block pr-2">
                         <span class="icon">
-                            <i class="fas fa-folder-plus"></i>
+                            <i class="fas fa-redo-alt"></i>
                         </span>
                         <span>Mettre à jour</span>
                     </button>

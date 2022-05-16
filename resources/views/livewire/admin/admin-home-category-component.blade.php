@@ -5,14 +5,7 @@
 <div class="container-fluid">
     <!-- Page Heading -->
     <div class="d-sm-flex align-items-center justify-content-between mb-4">
-        <h1 class="h3 mb-0 text-gray-800"><i class="fas fa-image mx-1"></i>Gestion des catégories</h1>
-
-        <a href="{{ route('admin.addhomeslider') }}" class="btn btn-primary bg-gradient-primary btn-icon-split btn-sm d-none d-sm-inline-block pr-2">
-            <span class="icon">
-                <i class="fas fa-image"></i>
-            </span>
-            <span>Ajouter une bannière</span>
-        </a>
+        <h1 class="h3 mb-0 text-gray-800"><i class="fas fa-tasks mx-1"></i> Gestion des catégories</h1>
     </div>
 
     @if (Session::has('message'))
@@ -43,8 +36,11 @@
                             <input name="numberof" id="numberof" multiple="multiple" class="form-control" wire:model="number_of_products"/>
                         </div>
                         <div class="form-group">
-                            <button type="submit" class="btn btn-success text-white bg-gradient-success">
-                                Mettre à jour
+                            <button type="submit" class="btn btn-success text-white bg-gradient-success btn-icon-split d-none d-inline-block pr-2">
+                                <span class="icon">
+                                    <i class="fas fa-redo-alt"></i>
+                                </span>
+                                <span>Mettre à jour</span>
                             </button>
                         </div>
                     </form>
